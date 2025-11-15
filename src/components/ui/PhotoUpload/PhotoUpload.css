@@ -1,0 +1,129 @@
+.photo-upload-container {
+	margin-bottom: 1.5rem;
+}
+
+.photo-upload-label {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #374151;
+	margin-bottom: 0.5rem;
+}
+
+.photo-upload-label.required::after {
+	content: " *";
+	color: #ef4444;
+}
+
+.photo-upload-wrapper {
+	margin-top: 0.25rem;
+}
+
+.photo-upload-input-label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5rem 1rem;
+	border: 2px dashed #d1d5db;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: border-color 0.2s;
+	background-color: #fff;
+}
+
+.photo-upload-input-label:hover {
+	border-color: #9ca3af;
+}
+
+.photo-upload-input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+.photo-upload-icon {
+	width: 3rem;
+	height: 3rem;
+	color: #9ca3af;
+	margin-bottom: 0.5rem;
+}
+
+.photo-upload-text {
+	font-size: 0.875rem;
+	color: #4b5563;
+	margin-top: 0.5rem;
+}
+
+.photo-upload-hint {
+	font-size: 0.75rem;
+	color: #6b7280;
+	margin-top: 0.25rem;
+}
+
+.photo-upload-error {
+	margin-top: 0.5rem;
+	font-size: 0.875rem;
+	color: #dc2626;
+}
+
+.photo-preview {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	border: 1px solid #e5e7eb;
+	border-radius: 0.5rem;
+	background-color: #f9fafb;
+}
+
+.photo-preview-image {
+	width: 5rem;
+	height: 5rem;
+	object-fit: cover;
+	border-radius: 0.375rem;
+	flex-shrink: 0;
+}
+
+.photo-preview-info {
+	flex: 1;
+	min-width: 0;
+}
+
+.photo-preview-filename {
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #111827;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0 0 0.25rem 0;
+}
+
+.photo-preview-remove {
+	background: none;
+	border: none;
+	padding: 0;
+	font-size: 0.875rem;
+	color: #dc2626;
+	font-weight: 500;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.photo-preview-remove:hover {
+	color: #b91c1c;
+	text-decoration: underline;
+}
+
+.photo-preview-remove:focus {
+	outline: 2px solid #3b82f6;
+	outline-offset: 2px;
+	border-radius: 2px;
+}

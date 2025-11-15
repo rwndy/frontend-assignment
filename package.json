@@ -1,0 +1,62 @@
+{
+	"name": "wizard-application",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview",
+		"prepare": "husky",
+		"lint:biome": "pnpm exec biome lint --write .",
+		"check:biome": "pnpm exec biome check --write --unsafe",
+		"format:biome": "pnpm exec biome format --write .",
+		"mock:start": "concurrently \"pnpm run mock:step1\" \"pnpm run mock:step2\"",
+		"mock:step1": "json-server --watch mock-api/db-step1.json --port 4001 --host 0.0.0.0",
+		"mock:step2": "json-server --watch mock-api/db-step2.json --port 4002 --host 0.0.0.0",
+		"docker:up": "docker compose -f mock-api/docker-compose.yml up -d",
+		"docker:down": "docker compose -f mock-api/docker-compose.yml down",
+		"docker:logs": "docker compose -f mock-api/docker-compose.yml logs -f",
+		"docker:restart": "pnpm run docker:down && pnpm run docker:up",
+		"test": "vitest",
+		"test:ui": "vitest --ui",
+		"test:coverage": "vitest --coverage"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,js,jsx,json,css,md}": [
+			"biome check --apply"
+		]
+	},
+	"dependencies": {
+		"clsx": "^2.1.1",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
+		"react-router-dom": "^7.9.5"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.5",
+		"@eslint/js": "^9.39.1",
+		"@testing-library/jest-dom": "^6.1.5",
+		"@testing-library/react": "^16.3.0",
+		"@testing-library/user-event": "^14.6.1",
+		"@types/node": "^24.10.0",
+		"@types/react": "^19.2.2",
+		"@types/react-dom": "^19.2.2",
+		"@vitejs/plugin-react": "^5.1.0",
+		"@vitest/coverage-v8": "^4.0.9",
+		"@vitest/ui": "^4.0.9",
+		"eslint": "^9.39.1",
+		"eslint-plugin-react-hooks": "^7.0.1",
+		"eslint-plugin-react-refresh": "^0.4.24",
+		"globals": "^16.5.0",
+		"husky": "^9.1.7",
+		"jsdom": "^27.2.0",
+		"json-server": "^0.17.4",
+		"lint-staged": "^16.2.6",
+		"typescript": "~5.9.3",
+		"typescript-eslint": "^8.46.3",
+		"vite": "^7.2.2",
+		"vitest": "^4.0.8"
+	}
+}

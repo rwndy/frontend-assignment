@@ -1,0 +1,19 @@
+.wizard__btn-roles {
+	justify-content: center;
+	gap: 16px;
+	margin-bottom: 30px;
+	display: flex;
+}
+
+.wizard {
+	max-width: 600px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+}
+
+.wizard__container {
+	background: white;
+	border-radius: 8px;
+	padding: 2rem;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

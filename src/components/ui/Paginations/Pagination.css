@@ -1,0 +1,106 @@
+.container {
+	background-color: #ffffff;
+	padding: 1rem 1.5rem;
+	border-top: 1px solid #e5e7eb;
+}
+
+/* Mobile Controls */
+.mobileControls {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+/* Desktop Controls */
+.desktopControls {
+	display: none;
+}
+
+.info {
+	margin-bottom: 0;
+}
+
+.info p {
+	font-size: 0.875rem;
+	color: #374151;
+	margin: 0;
+}
+
+.highlight {
+	font-weight: 600;
+	color: #111827;
+}
+
+.navigation {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.navButton {
+	min-width: 90px;
+}
+
+.pageNumbers {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.pageButton {
+	min-width: 2.5rem;
+	height: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #d1d5db;
+	background-color: #ffffff;
+	color: #6b7280;
+	font-size: 0.875rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 0.15s ease;
+	border-radius: 4px;
+}
+
+.pageButton:hover:not(.active) {
+	background-color: #f9fafb;
+	border-color: #9ca3af;
+}
+
+.pageButton:focus {
+	outline: 2px solid #3b82f6;
+	outline-offset: 2px;
+}
+
+.pageButton.active {
+	background-color: #3b82f6;
+	border-color: #3b82f6;
+	color: #ffffff;
+	cursor: default;
+}
+
+.ellipsis {
+	padding: 0 0.5rem;
+	color: #6b7280;
+	font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+	.mobileControls {
+		display: none;
+	}
+
+	.desktopControls {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@media (max-width: 639px) {
+	.container {
+		padding: 1rem;
+	}
+}

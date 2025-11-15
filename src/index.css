@@ -1,0 +1,387 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--color-primary: #3b82f6;
+	--color-primary-hover: #2563eb;
+	--color-primary-light: #dbeafe;
+
+	--color-success: #10b981;
+	--color-success-light: #d1fae5;
+
+	--color-error: #ef4444;
+	--color-error-light: #fee2e2;
+
+	--color-warning: #f59e0b;
+	--color-warning-light: #fef3c7;
+
+	--color-gray-50: #f9fafb;
+	--color-gray-100: #f3f4f6;
+	--color-gray-200: #e5e7eb;
+	--color-gray-300: #d1d5db;
+	--color-gray-400: #9ca3af;
+	--color-gray-500: #6b7280;
+	--color-gray-600: #4b5563;
+	--color-gray-700: #374151;
+	--color-gray-800: #1f2937;
+	--color-gray-900: #111827;
+
+	--input-spacing-sm: 0.5rem;
+	--input-spacing-md: 0.75rem;
+	--input-spacing-lg: 1rem;
+
+	/* Typography */
+	--input-font-size-sm: 0.875rem;
+	--input-font-size-md: 1rem;
+	--input-font-size-lg: 1.125rem;
+	--input-label-font-size: 0.875rem;
+	--input-message-font-size: 0.75rem;
+
+	/* Heights */
+	--input-height-sm: 2rem;
+	--input-height-md: 2.5rem;
+	--input-height-lg: 3rem;
+
+	/* Border Radius */
+	--input-border-radius: 0.375rem;
+
+	/* Colors */
+	--input-border-color: #d1d5db;
+	--input-border-color-hover: #9ca3af;
+	--input-border-color-focus: #3b82f6;
+	--input-border-color-error: #ef4444;
+
+	--input-bg-default: #ffffff;
+	--input-bg-filled: #f9fafb;
+	--input-bg-disabled: #f3f4f6;
+
+	--input-text-color: #111827;
+	--input-text-color-disabled: #9ca3af;
+	--input-placeholder-color: #6b7280;
+
+	--input-label-color: #374151;
+	--input-error-color: #ef4444;
+	--input-helper-color: #6b7280;
+
+	/* Focus Ring */
+	--input-focus-ring-width: 3px;
+	--input-focus-ring-color: rgba(59, 130, 246, 0.1);
+
+	/* Transitions */
+	--input-transition: all 0.2s ease-in-out;
+	font-family: "Roboto", sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87);
+	background-color: var(--color-primary);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Spacing */
+	--spacing-xs: 0.25rem;
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 1.5rem;
+	--spacing-xl: 2rem;
+	--spacing-2xl: 3rem;
+
+	/* Border Radius */
+	--radius-sm: 0.25rem;
+	--radius-md: 0.375rem;
+	--radius-lg: 0.5rem;
+	--radius-xl: 0.75rem;
+
+	/* Shadows */
+	--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	--shadow-md:
+		0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+	--shadow-lg:
+		0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+	/* Transitions */
+	--transition-fast: 150ms ease;
+	--transition-base: 200ms ease;
+	--transition-slow: 300ms ease;
+
+	/* Z-index */
+	--z-dropdown: 1000;
+	--z-modal: 1050;
+	--z-tooltip: 1100;
+}
+
+a {
+	font-weight: 500;
+	color: #646cff;
+	text-decoration: inherit;
+}
+a:hover {
+	color: #535bf2;
+}
+
+body {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: var(--color-gray-800);
+	background-color: var(--color-gray-50);
+	min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 600;
+	line-height: 1.25;
+	color: var(--color-gray-900);
+}
+
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.875rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 1.125rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+p {
+	margin: 0;
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+	transition: color var(--transition-base);
+}
+
+a:hover {
+	color: var(--color-primary-hover);
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+button {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+@media (max-width: 767px) {
+	html {
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 1.875rem;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media (min-width: 1024px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+.wizard__header {
+	margin-bottom: 2rem;
+}
+
+.wizard__title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 0.5rem;
+	color: #111827;
+}
+
+.wizard__subtitle {
+	font-size: 0.875rem;
+	color: #6b7280;
+	line-height: 1.5;
+}
+
+.wizard__subtitle code {
+	background: #f3f4f6;
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.25rem;
+	font-family: monospace;
+	font-size: 0.8125rem;
+}
+
+.wizard__btn-roles {
+	display: flex;
+	gap: 0.75rem;
+	margin-top: 1rem;
+}
+
+.wizard__step {
+	margin-top: 2rem;
+}
+
+.wizard__step-title {
+	font-size: 1.125rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	color: #111827;
+}
+
+.wizard__actions {
+	display: flex;
+	gap: 0.75rem;
+	justify-content: flex-end;
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #e5e7eb;
+}
+
+.wizard__progress {
+	margin: 1.5rem 0;
+	padding: 1rem;
+	background: #f9fafb;
+	border-radius: 0.5rem;
+	border: 1px solid #e5e7eb;
+}
+
+.wizard__progress h4 {
+	font-size: 0.875rem;
+	font-weight: 600;
+	margin-bottom: 0.75rem;
+	color: #111827;
+}
+
+.wizard__progress-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.wizard__progress-item {
+	font-size: 0.875rem;
+	padding: 0.5rem 0;
+	color: #6b7280;
+}
+
+.wizard__progress-item.success {
+	color: #059669;
+}
+
+.wizard__progress-item.error {
+	color: #dc2626;
+}
+
+.wizard__error {
+	padding: 0.75rem 1rem;
+	background: #fee2e2;
+	border: 1px solid #fecaca;
+	border-radius: 0.375rem;
+	color: #991b1b;
+	font-size: 0.875rem;
+	margin: 1rem 0;
+}
+
+.wizard__draft-info {
+	margin-top: 2rem;
+	padding: 1rem;
+	background: #eff6ff;
+	border: 1px solid #dbeafe;
+	border-radius: 0.5rem;
+	font-size: 0.875rem;
+	color: #1e40af;
+	line-height: 1.5;
+}
+
+.form-group {
+	margin-bottom: 1.5rem;
+}
+
+.form-label {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #374151;
+	margin-bottom: 0.5rem;
+}
+
+.form-textarea {
+	width: 100%;
+	padding: 0.625rem 0.75rem;
+	font-size: 0.875rem;
+	line-height: 1.5;
+	color: #111827;
+	background-color: #fff;
+	border: 1px solid #d1d5db;
+	border-radius: 0.375rem;
+	transition:
+		border-color 0.2s,
+		box-shadow 0.2s;
+	resize: vertical;
+	font-family: inherit;
+}
+
+.form-textarea:focus {
+	outline: none;
+	border-color: #3b82f6;
+	box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.form-helper {
+	margin-top: 0.5rem;
+	font-size: 0.875rem;
+	color: #6b7280;
+}
+
+.gap {
+	margin-block-start: 16px;
+}

@@ -1,0 +1,73 @@
+.wizard-header {
+	margin-bottom: 40px;
+}
+
+.wizard-progress {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.wizard-progress::before {
+	content: "";
+	position: absolute;
+	top: 15px;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: #e0e0e0;
+	z-index: 1;
+}
+
+.wizard-step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 2;
+	flex: 1;
+}
+
+.wizard-step-indicator {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #e0e0e0;
+	color: #666;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+	margin-bottom: 8px;
+	transition: all 0.3s ease;
+}
+
+.wizard-step.active .wizard-step-indicator {
+	background-color: #dc2626;
+	color: white;
+}
+
+.wizard-step.completed .wizard-step-indicator {
+	background-color: #10b981;
+	color: white;
+}
+
+.wizard-step-label {
+	font-size: 14px;
+	color: #666;
+	text-align: center;
+}
+
+.wizard-step.active .wizard-step-label {
+	color: #000;
+	font-weight: 600;
+}
+
+.wizard-step-title {
+	font-size: 28px;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 30px;
+}
