@@ -1,6 +1,10 @@
+const isDevelopment = import.meta.env.DEV;
+
 export const API_ENDPOINTS = {
-	BASE: "http://localhost:4001",
-	DETAILS: "http://localhost:4002",
+	BASE: isDevelopment ? "http://localhost:4001/basicInfo" : "/api/basicInfo",
+	DETAILS: isDevelopment ? "http://localhost:4002/details" : "/api/details",
+	DEPARTMENTS: isDevelopment ? "http://localhost:4001/departments" : "/api/departments",
+	LOCATIONS: isDevelopment ? "http://localhost:4002/locations" : "/api/locations",
 } as const;
 
 export const STORAGE_KEYS = {

@@ -8,11 +8,11 @@ import type {
 
 class EmployeeService {
 	private async fetchBasicInfo(): Promise<BasicInfoWithId[]> {
-		return apiClient.get<BasicInfoWithId[]>(`${API_ENDPOINTS.BASE}/basicInfo`);
+		return apiClient.get<BasicInfoWithId[]>(API_ENDPOINTS.BASE);
 	}
 
 	private async fetchDetails(): Promise<DetailsEmployee[]> {
-		return apiClient.get<DetailsEmployee[]>(`${API_ENDPOINTS.DETAILS}/details`);
+		return apiClient.get<DetailsEmployee[]>(API_ENDPOINTS.DETAILS);
 	}
 
 	async fetchAndMergeEmployees(): Promise<MergedEmployee[]> {

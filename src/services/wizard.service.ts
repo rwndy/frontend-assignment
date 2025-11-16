@@ -12,11 +12,11 @@ class WizardService {
 	}
 
 	async getDepartments(): Promise<Department[]> {
-		return apiClient.get<Department[]>(`${API_ENDPOINTS.BASE}/departments`);
+		return apiClient.get<Department[]>(API_ENDPOINTS.DEPARTMENTS);
 	}
 
 	async getLocations(): Promise<Location[]> {
-		return apiClient.get<Location[]>(`${API_ENDPOINTS.DETAILS}/locations`);
+		return apiClient.get<Location[]>(API_ENDPOINTS.LOCATIONS);
 	}
 
 	async searchDepartments(query: string): Promise<Department[]> {
@@ -42,16 +42,13 @@ class WizardService {
 	async submitBasicInfo(data: BasicInfo): Promise<SubmitBasicInfoResponse> {
 		await this.delay(VALIDATION_RULES.API_DELAY_MS);
 
-		return apiClient.post<SubmitBasicInfoResponse>(
-			`${API_ENDPOINTS.BASE}/basicInfo`,
-			data,
-		);
+		return apiClient.post<SubmitBasicInfoResponse>(API_ENDPOINTS.BASE, data);
 	}
 
 	async submitDetails(data: Details & { basicInfoId: string }): Promise<void> {
 		await this.delay(VALIDATION_RULES.API_DELAY_MS);
 
-		await apiClient.post<void>(`${API_ENDPOINTS.DETAILS}/details`, data);
+		await apiClient.post<void>(API_ENDPOINTS.DETAILS, data);
 	}
 }
 
